@@ -1,0 +1,53 @@
+{
+    "test": {
+        "column_proterty": {
+            "content": {
+                "data_length": "50",
+                "data_type": "char",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "0",
+                "is_unique": "0"
+            },
+            "id": {
+                "data_length": "2",
+                "data_type": "int",
+                "is_foreign": "0",
+                "is_null": "1",
+                "is_primary": "1",
+                "is_unique": "1"
+            },
+            "info": {
+                "data_length": "10",
+                "data_type": "char",
+                "is_foreign": "0",
+                "is_null": "1",
+                "is_primary": "0",
+                "is_unique": "1"
+            }
+        },
+        "data": [
+            {
+                "content": "123",
+                "id": "123",
+                "info": "123"
+            },
+            {
+                "content": "123",
+                "id": "1234",
+                "info": "1234"
+            },
+            {
+                "content": "123",
+                "id": "12345",
+                "info": "12345"
+            },
+            {
+                "content": "",
+                "id": "123456",
+                "info": "123456"
+            }
+        ],
+        "primary_key": "id"
+    }
+}

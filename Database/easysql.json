@@ -1,0 +1,42 @@
+{
+    "user": {
+        "data": [
+            {
+                "password": "63a9f0ea7bb98050796b649e85481845",
+                "right": {
+                    "delete": [
+                        "all"
+                    ],
+                    "insert": [
+                        "all"
+                    ],
+                    "select": [
+                        "all"
+                    ],
+                    "update": [
+                        "all"
+                    ]
+                },
+                "username": "root"
+            },
+            {
+                "password": "202cb962ac59075b964b07152d234b70",
+                "right": {
+                    "delete": [
+                        "test"
+                    ],
+                    "insert": [
+                        "test"
+                    ],
+                    "select": [
+                        "test"
+                    ],
+                    "update": [
+                        "test"
+                    ]
+                },
+                "username": "test"
+            }
+        ]
+    }
+}
