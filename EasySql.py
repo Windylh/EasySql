@@ -54,7 +54,7 @@ class EasySql(object):
             """
         )
 
-# 登录模块
+    # 登录模块
     # 登录
     def login(self):
         if self.check_login():
@@ -437,7 +437,7 @@ class EasySql(object):
             f.close()
         print('Query OK!')
 
-
+    # 功能模块
     # 将表完整性约束条件写入表，返回数据表主键
     def record_tableinfo(self, infos, columns):
         # print(infos, columns)
@@ -527,7 +527,6 @@ class EasySql(object):
                 self.__current_db = sql_words[1]
                 print('Database changed\n')
                 self.use_database()
-
         elif operate == 'show':
             if sql_words[1] == 'databases':
                 self.show_databases()
@@ -538,7 +537,6 @@ class EasySql(object):
                     self.show_tables()
             else:
                 print('Query error')
-
         elif operate == 'create':
             if sql_words[1] == 'database':
                 try:
@@ -559,7 +557,6 @@ class EasySql(object):
                         self.create_table(tablename, columns)
             else:
                 print('Query error')
-
         elif operate == 'drop':
             if not sql_words[2]:
                 print('Query error')
@@ -571,7 +568,6 @@ class EasySql(object):
                 self.drop_table(sql_words[2])
             else:
                 print('Query error')
-
         elif operate == 'insert':
             if not self.__current_db:
                 print('Please choose a database first')
@@ -585,7 +581,6 @@ class EasySql(object):
                     print('Query error')
                 else:
                     self.insert(tablename, columns)
-
         elif operate == 'delete':
             if not self.__current_db:
                 print('Please choose a database first')
@@ -597,7 +592,6 @@ class EasySql(object):
                 result = re.search(pattern, sql)
                 condition = self.where(result.group(1)) if result else 'True'
                 self.delete(tablename, condition)
-
         elif operate == 'update':
             if not self.__current_db:
                 print('Please choose a database first')
@@ -618,7 +612,6 @@ class EasySql(object):
                     return
                 else:
                     self.update(tablename, result.group(1).split(','), condition)
-
         elif operate == 'select':
             if len(sql_words) < 4:
                 print('Query error')
@@ -661,7 +654,7 @@ class EasySql(object):
             if len(sql_words) < 6:
                 print('Query error')
                 return
-            pattern = re.compile(r'revoke (.*?) on (.*?) to (.*?)$')
+            pattern = re.compile(r'revoke (.*?) on (.*?) from (.*?)$')
             result = re.search(pattern, sql)
             if not result:
                 print('Query error')
